@@ -15,6 +15,6 @@
  */
 .logo {
 
-    content:url(../../../../Favour-It/app/assets/images/favouritchrisdarkblue.png);
+    background: image-url('favouritchrisdarkblue.png')
 
-}
+
