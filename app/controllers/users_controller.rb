@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 	def user_params
-		params.require(:user).permit(:signin, :name, :first_name, :last_name, :email).merge(user_id: current_user.id)
+		params.require(:user).permit(:name, :first_name, :last_name, :email).merge(user_id: current_user.id)
 
 	end
 end

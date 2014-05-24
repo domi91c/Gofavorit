@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
 
 	validates :username, :uniqueness => {:case_sensitive => false}
 
-	attr_accessor :signin
 
 	has_many :posts
 	has_one :offer
