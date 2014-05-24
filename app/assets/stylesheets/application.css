@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+.logo {
+
+    content:url(../../../../Favour-It/app/assets/images/favouritchrisdarkblue.png);
+
+}
