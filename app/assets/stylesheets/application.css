@@ -18,3 +18,10 @@
     content:url(favouritchrisdarkblue.png);
 
 }
+
+#firstbar
+{
+    min-width:960px;
+    height:200px;
+    background:url("background_favourit.jpg");
+}
