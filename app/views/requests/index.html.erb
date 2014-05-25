@@ -19,7 +19,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= User %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -29,7 +29,7 @@
   <tbody>
     <% @requests.each do |request| %>
       <tr>
-        <td><%= link_to request.id, request_path(request) %></td>
+        <td><%= link_to current_user.username, request_path(request) %></td>
         <td><%= request.title %></td>
         <td><%= request.description %></td>
         <td><%=l request.created_at %></td>
