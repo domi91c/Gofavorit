@@ -53,26 +53,6 @@ body{
 }
 
 
-.btn {
-    font: 400 16px/120% "proxima-nova", sans-serif;
-    border: none;
-
-    background: #7fa089;
-    text-align: center;
-    min-width: 3.8em;
-    letter-spacing: 0;
-    display: inline-block;
-    -webkit-border-radius: 0.4rem;
-    -moz-border-radius: 0.4rem;
-    -ms-border-radius: 0.4rem;
-    -o-border-radius: 0.4rem;
-    border-radius: 0.4rem;
-    -webkit-transition: all 0.15s ease;
-    -moz-transition: all 0.15s ease;
-    -o-transition: all 0.15s ease;
-    transition: all 0.15s ease;
-}
-
 .contain{
     border: 10px;
     padding: 10px;
