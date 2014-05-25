@@ -16,7 +16,7 @@
 .logo {
 
     content:url(favouritchrisdarkblue.png);
-
+    height: 100px;
 }
 
 #firstbar
@@ -24,4 +24,15 @@
     min-width:960px;
     height:200px;
     background:url("background_favourit.jpg");
+}
+
+#headerbar {
+    background-color: #4D77A2;
+    color: #bac1c8;
+    padding: 10px;
+}
+
+
+.btn {
+
 }

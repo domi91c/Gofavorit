@@ -5,15 +5,17 @@
   <input type="submit" value="Upload">
 </form>
 
-<%= form_tag requests_path, :method => "get" do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Requests" %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
 
 
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <%= form_tag requests_path, :method => "get" do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Requests" %>
+      <%= submit_tag "Search", :class => "btn" , :name => nil %>
+  <% end %>
+
 </div>
+
 <table class="table table-striped">
   <thead>
     <tr>
