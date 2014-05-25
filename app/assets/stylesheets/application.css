@@ -16,8 +16,9 @@
 
 
 body{
-    background: url("paperbg1.jpg");
+    background-color: green;
 
+    background: url("paperbg.jpg");
     background-repeat: inherit;
 }
 .logo {
@@ -26,10 +27,15 @@ body{
     height: 80px;
 }
 
+#navbar {
+    background-color: #000;
+    color: #bac1c8;
+    padding: 20px;
+}
 #firstbar
 {
     min-width:960px;
-    height:200px;
+    height:150px;
     background:url("background_favourit.jpg");
 }
 
@@ -37,6 +43,13 @@ body{
     background-color: #4D77A2;
     color: #bac1c8;
     padding: 10px;
+}
+
+#headerbar2 {
+    background-color: #d0e3c6;
+    color: #bac1c8;
+    padding: 10px;
+
 }
 
 

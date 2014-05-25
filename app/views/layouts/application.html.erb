@@ -41,6 +41,34 @@
 </head>
 <body>
 
+
+<div class="fixed"><nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">My Site</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Right Button Active</a></li>
+      <li class="has-dropdown">
+        <a href="#">Right Button Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><a href="#">Left Nav Button</a></li>
+    </ul>
+  </section>
+</nav></div>
 <div id="rectangle">
 
 
@@ -51,6 +79,12 @@
 
 <div id="headerbar">
 </div>
+<div id="headerbar2">
+  <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+  <%end%>
+</div>
+
 
 <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
@@ -76,9 +110,7 @@
           <div class="rectangle"></div>
 
         </div>
-        <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
-        <%end%>
+
         <!--<a class="brand" href="#">Favour It</a>-->
 
         <div class="container-fluid nav-collapse">
@@ -126,8 +158,10 @@
 
 </body>
 
+
 <footer>
   <p>&copy; Discourse Software 2014</p>
 </footer>
+
 
 </html>
