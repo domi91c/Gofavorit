@@ -2837,15 +2837,7 @@ p {
     font-style: italic; }
 
 /* Default header styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #222222;
-  text-rendering: optimizeLegibility;
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.4; }
+
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
     color: #6f6f6f;
@@ -4227,37 +4219,6 @@ ul.off-canvas-list {
     max-width: 500px; }
   .f-dropdown.large {
     max-width: 800px; }
-
-table {
-  background: white;
-  margin-bottom: 1.25rem;
-  border: solid 1px #dddddd; }
-  table thead,
-  table tfoot {
-    background: whitesmoke; }
-    table thead tr th,
-    table thead tr td,
-    table tfoot tr th,
-    table tfoot tr td {
-      padding: 0.5rem 0.625rem 0.625rem;
-      font-size: 0.875rem;
-      font-weight: bold;
-      color: #222222;
-      text-align: left; }
-  table tr th,
-  table tr td {
-    padding: 0.5625rem 0.625rem;
-    font-size: 0.875rem;
-    color: #222222; }
-  table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: #f9f9f9; }
-  table thead tr th,
-  table tfoot tr th,
-  table tbody tr td,
-  table tr td,
-  table tfoot tr td {
-    display: table-cell;
-    line-height: 1.125rem; }
 
 /* Standard Forms */
 form {
