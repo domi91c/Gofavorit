@@ -16,6 +16,8 @@ class RequestsController < ApplicationController
   # GET /requests/1
   # GET /requests/1.json
   def show
+
+
   end
 
   # GET /requests/new
@@ -75,6 +77,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:title, :description)
+	    params.require(:request).permit(:title, :description, :username).merge(user_id: current_user.id)
     end
 end

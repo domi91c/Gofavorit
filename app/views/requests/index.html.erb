@@ -29,8 +29,8 @@
   <tbody>
     <% @requests.each do |request| %>
       <tr>
-        <td><%= link_to current_user.username, request_path(request) %></td>
-        <td><%= request.title %></td>
+        <td><%= link_to request.user.email, request_path(request) %></td>
+        <td><%= request.user.username %></td>
         <td><%= request.description %></td>
         <td><%=l request.created_at %></td>
         <td>
