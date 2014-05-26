@@ -26,7 +26,22 @@
     </tr>
   </thead>
   <tbody>
-
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= link_to request.user.username, request_path(request) %></td>
+        <td><%= request.title %></td>
+        <td><%=l request.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_request_path(request), :class => 'button button-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      request_path(request),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'button button-mini button-danger' %>
+        </td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 

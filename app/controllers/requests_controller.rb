@@ -4,13 +4,13 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.all
+	  @requests = Offer.all
 
-    if params[:search]
-	    @requests = Request.search(params[:search]).order("created_at DESC")
-    else
-	    @requests = Request.all.order('created_at DESC')
-    end
+	  if params[:search]
+		  @requests = Offer.search(params[:search]).order("created_at DESC")
+	  else
+		  @requests = Offer.all.order('created_at DESC')
+	  end
   end
 
   # GET /requests/1
