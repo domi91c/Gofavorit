@@ -46,7 +46,7 @@
   <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">Fi</a></h1>
+      <div class="navlogo"></div>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -55,11 +55,20 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#">Right Button Active</a></li>
+      <% if user_signed_in? %>
+          <li class="active"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+          <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
+    <%end%>
+
       <li class="has-dropdown">
         <a href="#">Browse</a>
         <ul class="dropdown">
-          <li><a href="#">Add Post</a></li>
+          <li><%= link_to "View Offers", offers_path %></li>
+          <li><%= link_to "Add Offer", new_offer_path %></li>
+          <li><%= link_to "View Requests", requests_path %></li>
+          <li><%= link_to "Add Request", new_request_path %></li>
+
         </ul>
       </li>
     </ul>
