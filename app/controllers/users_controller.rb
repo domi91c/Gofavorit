@@ -18,9 +18,10 @@ class UsersController < ApplicationController
 
 	end
 	def create
-		@user = User.new(user_params)
+		@user = User.new(sign_up_params)
 		if @user.save
 			redirect_to posts_path, notice: 'User successfully added.'
+			raise params.inspect
 
 		else
 			render profiles_path
@@ -41,6 +42,9 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 	def user_params
+		params.require(:user).permit(:name, :first_name, :last_name, :email, :username)
+	end
+	def sign_up_params
 		params.require(:user).permit(:name, :first_name, :last_name, :email, :username)
 	end
 end
