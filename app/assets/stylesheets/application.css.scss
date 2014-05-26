@@ -60,6 +60,15 @@ body{
 
 }
 
+#footer2 {
+  background-color: blue;
+  height: 30px;
+  margin-top: -50px;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  z-index: 1;
+}
 
 .btn {
   font: 400 16px/120% "proxima-nova", sans-serif;
