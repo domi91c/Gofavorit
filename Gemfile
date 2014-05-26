@@ -49,9 +49,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'foundation-rails'
-
-
-gem 'foundation-rails'
 gem 'high_voltage'
 
 
