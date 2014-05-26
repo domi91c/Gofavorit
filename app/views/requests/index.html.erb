@@ -1,48 +1,51 @@
+<%- model_class = Request -%>
 
-<%- model_class = Offer -%>
-
-
-
-<%= form_tag offers_path, :method => "get" do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Offers" %>
-    <%= submit_tag "Search", :class => 'button', :name => nil %>
-<% end %>
+<form action="server.cgi" method="post" enctype="multipart/form-data">
+  <input type="file" name="video" accept="video/*" capture>
+  <input type="submit" value="Upload">
+</form>
 
 
 
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <%= form_tag requests_path, :method => "get" do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Requests" %>
+      <%= submit_tag "Search", :class => "button" , :name => nil %>
+  <% end %>
+
 </div>
+
 <table class="table table-striped">
   <thead>
-  <tr>
-    <th><%= User %></th>
-    <th><%= model_class.human_attribute_name(:title) %></th>
-    <th><%= model_class.human_attribute_name(:created_at) %></th>
-    <th><%=t '.actions', :default => t("helpers.actions") %></th>
-  </tr>
+    <tr>
+      <th><%= User %></th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
   </thead>
   <tbody>
-
-  <% @requests.each do |offer| %>
+    <% @requests.each do |request| %>
       <tr>
-        <td><%= link_to offer.user.username, offer_path(offer) %></td>
-        <td><%= offer.title %></td>
-        <td><%= offer.created_at %></td>
+        <td><%= link_to request.user.username, request_path(request) %></td>
+        <td><%= request.title %></td>
+        <td><%=l request.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_offer_path(offer), :class => 'button' %>
+                      edit_request_path(request), :class => 'button button-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      offer_path(offer),
+                      request_path(request),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'button' %>
+                      :class => 'button button-mini button-danger' %>
         </td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_offer_path,
-            :class => 'button' %>
+            new_request_path,
+            :class => 'button button-primary' %>
+
