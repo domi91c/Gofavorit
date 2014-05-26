@@ -17,7 +17,7 @@ class RequestsController < ApplicationController
   # GET /requests/1.json
   def show
 	  @user = User.find(current_user)
-	  @requests = @user.offers
+	  @requests = @user.requests
 
   end
 
