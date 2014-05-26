@@ -3,14 +3,21 @@ class ProfilesController < ApplicationController
   before_filter :authenticate_user!, :only => [:index, :new]
 
 
+  def index
+	  @user = current_user
+
+	  @offers = @user.offers
+	  @requests = @user.requests
+	  # @posts = (@offers + @requests).sort_by(&:created_at)
+  end
 
   # GET /profiles
   # GET /profiles.json
-  def index
-	 @post = Post.where(:user_id => current_user.id)
-
-
-	end
+  # def index
+	 # @post = Post.where(:user_id => current_user.id)
+  #
+  #
+  # end
 
   # GET /profiles/1
   # GET /profiles/1.json
