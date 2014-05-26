@@ -27,8 +27,8 @@
 
   <% @offers.each do |offer| %>
       <tr>
-        <td><%= link_to offer.user.email, offer_path(offer) %></td>
-        <td><%= offer.user.email %></td>
+        <td><%= link_to offer.user.username, offer_path(offer) %></td>
+        <td><%= offer.title %></td>
         <td><%= offer.description %></td>
         <td><%= offer.created_at %></td>
         <td>
