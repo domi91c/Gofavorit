@@ -13,7 +13,8 @@
     <h1><%= current_user.name %></h1>
   </div>
   <div class="contain">
-  <h5>My Offers</h5>
+  <h5>My Offers - <%= @offers.count %></h5>
+
   <!--<h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
 
 <table class="table table-striped">
@@ -51,7 +52,7 @@
 
 
   <div class="contain">
-    <h5>My Requests</h5>
+    <h5>My Requests - <%= @requests.count %></h5>
     <!--<h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
 
     <table class="table table-striped">
