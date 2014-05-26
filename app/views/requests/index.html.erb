@@ -24,7 +24,7 @@
   </thead>
   <tbody>
 
-  <% @offers.each do |offer| %>
+  <% @requests.each do |offer| %>
       <tr>
         <td><%= link_to offer.user.username, offer_path(offer) %></td>
         <td><%= offer.title %></td>
