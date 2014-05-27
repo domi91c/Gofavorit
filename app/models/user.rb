@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 	has_one :profile
 
 
+
 	def name
 		"#{first_name} #{last_name}"
 	end

@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20140527081351) do
     t.string   "address"
     t.integer  "location_id"
     t.boolean  "gmaps"
-    t.float   "latitude"
-    t.float   "longitude"
+    t.string   "latitude"
+    t.string   "longitude"
   end
 
   create_table "posts", force: true do |t|
