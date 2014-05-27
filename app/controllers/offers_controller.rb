@@ -19,10 +19,10 @@ class OffersController < ApplicationController
 	  @user = User.find(current_user)
 	  @offers = @user.offers
 
-	  @json = @offer.location.to_gmaps4rails
+	  @json = Location.find(params[:location_id]).to_gmaps4rails
 	  respond_to do |format|
 		  format.html # index.html.erb
-		  format.json { render json: @offer.location }
+		  format.json { render json: @location }
 	  end
   end
   # GET /offers/new
