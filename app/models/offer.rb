@@ -1,9 +1,15 @@
 class Offer < ActiveRecord::Base
-	belongs_to :user
+	acts_as_gmappable
 
+
+	belongs_to :user
+	belongs_to :location
 
 	def self.search(query)
 		where("title like ?", "%#{query}%")
 	end
 
+	def gmaps4rails_address
+		address
+	end
 end

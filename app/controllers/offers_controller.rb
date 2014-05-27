@@ -19,6 +19,11 @@ class OffersController < ApplicationController
 	  @user = User.find(current_user)
 	  @offers = @user.offers
 
+	  @json = @offer.location.to_gmaps4rails
+	  respond_to do |format|
+		  format.html # index.html.erb
+		  format.json { render json: @offer.location }
+	  end
   end
   # GET /offers/new
   def new
@@ -78,7 +83,7 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:title, :description, :username).merge(user_id: current_user.id)
+      params.require(:offer).permit(:title, :description, :username, :location, :address).merge(user_id: current_user)
 
     end
 end
