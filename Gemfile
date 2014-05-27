@@ -6,6 +6,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'therubyracer'
 gem 'jazz_hands'
+gem 'gmaps4rails'
+gem 'gmaps4rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
