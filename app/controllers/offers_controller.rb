@@ -16,13 +16,11 @@ class OffersController < ApplicationController
   # GET /offers/1
   # GET /offers/1.json
   def show
-	  @user = User.find(current_user)
-	  @offers = @user.offers
-
-	  @json = Location.find(params[:id]).to_gmaps4rails
+		@offers = @offer
+	  @json = @offers.to_gmaps4rails
 	  respond_to do |format|
 		  format.html # index.html.erb
-		  format.json { render json: @location }
+		  format.json { render json: @json }
 	  end
   end
   # GET /offers/new
@@ -83,7 +81,7 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:title, :description, :username, :location, :address).merge(user_id: current_user)
+      params.require(:offer).permit(:title, :description, :username, :location, :address, :latitude, :longitude).merge(user_id: current_user)
 
     end
 end

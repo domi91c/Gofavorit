@@ -6,7 +6,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'therubyracer'
 gem 'jazz_hands'
-gem 'gmaps4rails', '1.5.6'
+gem 'gmaps4rails'
 gem 'geocoder'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
