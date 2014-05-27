@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
 
 	  @offers = @user.offers
 	  @requests = @user.requests
-	  # @posts = (@offers + @requests).sort_by(&:created_at)
+	  @json = Location.all.to_gmaps4rails
   end
 
   # GET /profiles

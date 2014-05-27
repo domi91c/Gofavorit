@@ -166,6 +166,7 @@
     <div class="span9">
       <%= bootstrap_flash %>
       <%= yield %>
+      <%= yield :scripts %>
     </div>
   </div><!--/row-->
 
@@ -175,9 +176,6 @@
 </body>
 
 
-<div id="footer2">
-  <p>&copy; Discourse Software 2014</p>
-</div>
 
 <script>
     $(document).foundation();
