@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="852519405">
+    <data-source source="LOCAL" name="Rails Favour-It: development" uuid="7073097b-1504-4f0a-a819-56270cd2d3f9">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:dominic</jdbc-url>
+      <user-name>dominic</user-name>
+      <user-password>dfcedfc5dfc7dfc3dfc4dfc3dfc9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Favour-It: test" uuid="21cc364c-50c4-4f32-b56f-1e9e116e22a1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:Favour-It_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Favour-It: production" uuid="58c040be-cab2-4b81-a9f6-1db078e57144">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:dominic</jdbc-url>
+      <user-name>dominic</user-name>
+      <user-password>dfcedfc5dfc7dfc3dfc4dfc3dfc9</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
