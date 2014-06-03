@@ -73,3 +73,7 @@ group :test do
 end
 
 gem 'bundler'
+
+gem 'jquery-ui-rails'
+gem 'less-rails-bootstrap'
+gem 'designmodo-flatuipro-rails'

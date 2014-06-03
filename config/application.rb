@@ -25,6 +25,11 @@ module FavourIt
 
 	  config.assets.initialize_on_precompile = false
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.precompile += %w( *.js *.css *.eot *.woff *.ttf *.svg )
+
+
     config.to_prepare do
 	    Devise::SessionsController.layout "application.html.erb"
 	    Devise::RegistrationsController.layout "application.html.erb"
