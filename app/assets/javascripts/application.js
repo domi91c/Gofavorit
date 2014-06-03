@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(function() {
-  $(document).foundation();
-});
 
 
 // Some general UI pack related JS

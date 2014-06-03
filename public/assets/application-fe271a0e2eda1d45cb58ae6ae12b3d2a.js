@@ -15052,9 +15052,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 
 
-$(function() {
-  $(document).foundation();
-});
 
 
 // Some general UI pack related JS
