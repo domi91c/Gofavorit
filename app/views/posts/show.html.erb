@@ -1,0 +1,26 @@
+<%- model_class = Post -%>
+<div class="page-header">
+
+  <div class="profilepic"></div>
+  <div class="profilename"><%= link_to @post.user.username, profiles_path  %> </div>
+
+
+  <h3><%= @post.title %></h3>
+</div>
+
+
+  <%= @post.body %>
+
+
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'button'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_post_path(@post), :class => 'button' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              post_path(@post),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'button' %>
+</div>
