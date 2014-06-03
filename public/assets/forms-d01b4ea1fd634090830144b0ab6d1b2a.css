@@ -1,0 +1,103 @@
+/* Simple Reset */
+/* line 4, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+/* line 7, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.formbody {
+  background: #ffffff;
+  color: #5e5e5e;
+  font: 400 87.5%/1.5em 'Open Sans', sans-serif;
+}
+
+/* Form Layout */
+/* line 14, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-wrapper {
+  padding: 0 1em;
+  max-width: 370px;
+}
+
+/* line 19, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.formh1 {
+  padding: 1em 0;
+}
+
+/* line 23, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.formform {
+  padding: 0 1.5em;
+}
+
+/* line 27, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-item {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 32, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-item input {
+  background: #fafafa;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+/* line 44, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-item input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+/* line 49, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.button-panel {
+  margin: 2em 0 0;
+  width: 100%;
+}
+
+/* line 54, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.button-panel .button {
+  background: #005e93;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* line 69, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.button:hover {
+  background: #002d47;
+}
+
+/* line 73, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-footer {
+  font-size: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+/* line 79, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-footer a {
+  color: #8c8c8c;
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+/* line 85, /Users/portOdin/RubymineProjects/Favour-It copy/app/assets/stylesheets/forms.css.scss */
+.form-footer a:hover {
+  border-bottom: 1px dotted #8c8c8c;
+}
