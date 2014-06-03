@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootagain</title>
+  <title>GoFavorIt</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="pull-left ">
@@ -53,15 +55,22 @@
       </form>
     </div>
   </div>
+
   <div id="headerbar2">
 
   </div>
 </nav>
 
 
-
 <div class="logo page-header"></div>
-
+<div class="headerbar2">
+  <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+</div>
 <div class="col-sm-3 col-md-2 sidebar-offcanvas well" id="sidebar" role="navigation">
   <ul class="nav nav-list">
     <li class="nav-header">Sidebar</li>
