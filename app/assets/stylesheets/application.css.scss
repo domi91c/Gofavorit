@@ -17,6 +17,21 @@
  *= require_self
  */
 
+
+#search-query-2{
+  background-color: #293a4a;
+  border-color: transparent;
+  color: white;
+
+
+}
+.navbar{
+  border: none;
+  border-left: none;
+
+}
+
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: font-url('glyphicons-halflings-regular.eot');
@@ -2196,7 +2211,7 @@ input[type="color"],
   font-family: "Lato", sans-serif;
   font-size: 14px;
   padding: 8px 5px;
-  height: 21px;
+  height: 31px;
   text-indent: 6px;
   -webkit-appearance: none;
   -webkit-border-radius: 6px;

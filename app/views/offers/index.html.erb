@@ -11,8 +11,14 @@
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
   <%= form_tag offers_path, :method => "get" do %>
 
-      <%= text_field_tag :search, params[:search], placeholder: "Search Offers" %>
-  <% end %>
+      <div class="span3">
+
+      </div>
+      <div class="span2 search-query search-query-rounded" style="display: inline-block">
+
+        <%= text_field_tag :search, params[:search], placeholder: "Search Offers",
+                           :style => 'width: 500px; display: inline-block;'%>
+        <%= submit_tag "Search", :class => "btn btn-primary" , :style => 'width: 75px;', :name => nil%></div>  <% end %>
 
 </div>
 
@@ -44,12 +50,15 @@
         </td>
       </tr>
     <% end %>
+
+    <%= button_to new_offer_path, class: "btn btn-large primary", :method => :get  do %>
+      New Offer <i class="glyphicon glyphicon-plus"></i>
+  <% end %>
+
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_offer_path,
-            :class => 'button' %>
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
+
